@@ -1,0 +1,129 @@
+@import "../../app.scss";
+
+
+.hero{
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+
+  .image-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+
+    @include mobile{
+      height: 50%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+      display: flex;
+
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+  }
+  .image-container img{
+    z-index: 5;
+    position: relative;
+  }
+
+  .slider-text-container{
+    position: absolute;
+    font-size: 50vh;
+    bottom: -108px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  .hero-container{
+    height: 100%;
+    margin: 0 40px;
+    padding-left: 40px;
+
+    @include mobile{
+      padding-left: 20px;
+    }
+
+    .text-container{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      @include mobile{
+        height: 50%;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      h2{
+        color: rebeccapurple;
+        letter-spacing: 10px;
+        font-size: 30px;
+
+        @include mobile{
+          font-size: 20px;
+        }
+      }
+      h1{
+        font-size: 88px;
+
+        @include mobile{
+          font-size: 36px;
+        }
+
+      }
+
+      .user-interaction-btns{
+        display: flex;
+        gap: 15px;
+
+        a{
+          padding: 15px 10px;
+          outline: none;
+          border-radius: 8px;
+          cursor: pointer;
+          z-index: 2;
+        }
+        .latest-work-a{
+          background-color: transparent;
+          border: 1px solid lightgray;
+          color: lightgray;
+
+        }
+
+        .contact-a{
+          background-color: #e3e3e3;
+          color: black;
+        }
+      }
+
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+
+
+  }
+
+
+
+}
